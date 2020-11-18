@@ -8,6 +8,8 @@ import {
 import { DOCUMENT } from '@angular/common';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { OwlOptions } from 'ngx-owl-carousel-o';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,7 +19,9 @@ gsap.registerPlugin(ScrollTrigger);
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  @ViewChild('secondSection', { static: true }) secondSection: ElementRef<
+  cartItems = 4;
+
+  @ViewChild('thirdSection', { static: true }) secondSection: ElementRef<
     HTMLDivElement
   >;
   @ViewChild('menu', { static: true }) menu: ElementRef<HTMLDivElement>;
@@ -225,4 +229,6 @@ export class AppComponent implements OnInit {
       delay: 0.8,
     });
   }
+
+
 }

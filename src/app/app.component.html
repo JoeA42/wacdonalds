@@ -2,67 +2,86 @@
   <header class="header">
     <ul class="menu" #menu>
       <li class="menu__item">
-        <a class="menu__link">Home</a>
+        <button mat-button [matMenuTriggerFor]="mainMenu">Menú</button>
+        <mat-menu #mainMenu="matMenu">
+        </mat-menu>
       </li>
       <li class="menu__item">
-        <a class="menu__link">About Us</a>
+        <button mat-button [matMenuTriggerFor]="locales">Locales</button>
+        <mat-menu #locales="matMenu">
+          <button mat-menu-item>Guácima</button>
+          <button mat-menu-item>Moravia</button>
+          <button mat-menu-item>Coronado</button>
+          <button mat-menu-item>Ciruelas</button>
+        </mat-menu>
       </li>
       <li class="menu__item">
-        <a class="menu__link">How it Works</a>
+        <button mat-button [matMenuTriggerFor]="promos">Promociones</button>
+        <mat-menu #promos="matMenu">
+          <button mat-menu-item>Combo Navideño</button>
+          <button mat-menu-item>Quick Snack</button>
+          <button mat-menu-item>Mita y Mita</button>
+        </mat-menu>
       </li>
       <li class="menu__item">
-        <a class="menu__link">Benefits</a>
+        <button mat-button [matMenuTriggerFor]="about">Nosotros</button>
+        <mat-menu #about="matMenu">
+          <button mat-menu-item>Información</button>
+          <button mat-menu-item>Contacto</button>
+        </mat-menu>
       </li>
       <li class="menu__item">
-        <a class="menu__link">Testimonials</a>
+        <button mat-icon-button>
+          <mat-icon [matBadge]="cartItems" [matBadgeHidden]="cartItems <= 0"  matBadgeColor="accent">shopping_cart</mat-icon>
+        </button>
       </li>
     </ul>
     <ul class="menu menu-right" #menuSecond>
       <li class="menu__item">
-        <a class="menu__link">Blog</a>
+        <button mat-button>Blog</button>
       </li>
       <li class="menu__item">
-        <a class="menu__link">FAQ</a>
+        <button mat-button>Empleo</button>
       </li>
     </ul>
   </header>
-  <section class="first-section">
+
+
+  <section class="second-section">
+    <app-slide></app-slide>
     <div class="info">
       <h1 class="heading-1">
-        Real estate advice for real locals.
+        Las mejores hamburguesas a la parrilla
       </h1>
       <p class="paragraph">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia adipisci
         deserunt eaque.
       </p>
-      <a class="btn btn--start">Get Started</a>
+      <a class="btn btn--start">pide ahora</a>
     </div>
     <div class="visuals">
       <div class="image-container">
         <img
           #imageFirst
-          src="../assets/photo-1536179247184-595913ca4a28.jpeg"
+          src="../assets/homemade-french-fries-5.jpg"
           alt=""
         />
       </div>
       <div class="image-container">
         <img
           #imageSecond
-          src="../assets/photo-1469817805249-72b7df1c3c05.jpeg"
+          src="../assets/Avocado-Chicken-Burgers_9.jpg"
           alt=""
         />
       </div>
     </div>
   </section>
-  <section class="second-section" #secondSection>
+  <section class="third-section" #thirdSection>
     <div class="box"></div>
-    <h4 class="heading-4" id="about">About Us</h4>
-    <h1 class="heading-1" id="buy">Buying a home doesn't have to be a mystery.</h1>
+    <h4 class="heading-4" id="about">Acerca de Nosotros</h4>
+    <h1 class="heading-1" id="buy">Cosas de hamburguesas bla bla bla</h1>
     <div class="info-1">
       <div class="info-1__text">
-        <span class="quote">
-          "
-        </span>
         <h2 class="heading-3">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit.
         </h2>
@@ -72,12 +91,12 @@
           veniam fuga fugit eius ab reiciendis, culpa id recusandae illum
           quisquam!
         </p>
-        <a class="btn--learn">Learn More</a>
       </div>
       <div class="info-1__visual">
-        <img src="../assets/photo-1593016605825-8cfb409ca3b1.jpeg" alt="">
+        <img src="../assets/big-burger-combo-menu-with-potatoes-drink_219193-144.jpg" alt="">
       </div>
     </div>
 
   </section>
+
 </div>
